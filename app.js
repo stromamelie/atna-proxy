@@ -3,7 +3,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 
 app.use('/', createProxyMiddleware({
-  target: 'https://beta.atna.xyz/dl/home',
+  target: 'https://beta.atna.xyz',
   changeOrigin: true,
   onProxyRes: (proxyRes) => {
     delete proxyRes.headers['x-frame-options'];
